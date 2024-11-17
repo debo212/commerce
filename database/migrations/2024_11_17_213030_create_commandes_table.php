@@ -11,15 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('commandes', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('role', ['admin', 'gestionnaire', 'client','livreur'])->default('client');
-            $table->rememberToken();
+            $table->unsignedBigInteger('id_panier');
+            $table->enum('statut', ['enattente', 'payé', 'livré'])->default('enattente');
             $table->timestamps();
+            $table->foreign('id_panier')->references('id')->on('paniers')->onDelete('cascade');
         });
     }
 
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('commandes');
     }
 };
