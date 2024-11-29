@@ -3,7 +3,6 @@
         <h2 class="text-2xl font-semibold text-gray-700">Créer un compte</h2>
         <p class="text-sm text-gray-500">Remplissez les détails pour vous inscrire</p>
     </div>
-    <x-auth-session-status class="mb-4" :status="session('status')" />
     <form method="POST" action="{{ route('register') }}" class="mt-10 space-y-4">
         @csrf
         <div class="grid sm:grid-cols-2 gap-8">
