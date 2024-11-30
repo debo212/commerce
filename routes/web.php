@@ -31,20 +31,20 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware(['auth', 'manager'])->prefix('manager')->group(function () {
-    Route::get('/gestionnaire/dashboard', [ManagerController::class, 'dashboard'])->name('manager.dashboard');
-    // Autres pages pour le gestionnaire
+Route::middleware(['auth', 'manager'])->group(function () {
+    Route::get('/manager/dashboard', [ManagerController::class, 'dashboard'])
+        ->name('manager.dashboard');
 });
 
-Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
-    Route::get('/admin/dashboard', [AdminController::class, 'index'])
-    ->name('admin.dashboard');
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])
+        ->name('admin.dashboard');
 });
 
 // Routes pour les clients
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/client/dashboard', [ClientController::class, 'index'])
-        ->name('client.dashboard');
+    Route::get('/client/index', [ClientController::class, 'index'])
+        ->name('client.index');
 });
 
 require __DIR__.'/auth.php';

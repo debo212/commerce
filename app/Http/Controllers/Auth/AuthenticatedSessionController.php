@@ -29,7 +29,28 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        // Récupérer l'utilisateur connecté
+        $user = $request->user();
+
+        // Redirection basée sur le rôle
+        if ($user->isAdmin()) {
+            return redirect()->route('admin.dashboard');
+        }
+
+        if ($user->isManager()) {
+            return redirect()->route('manager.dashboard');
+        }
+
+        // Pour les clients
+        if ($user->isClient()) {
+            // Vérifier si l'email est vérifié
+            if (!$user->hasVerifiedEmail()) {
+                return redirect()->route('verification.notice');
+            }
+            return redirect()->route('client.index');
+        }
+
+        return redirect('/');
     }
 
     /**
@@ -48,12 +69,15 @@ class AuthenticatedSessionController extends Controller
 
     protected function authenticated(Request $request, $user)
     {
-        if ($user->isAdmin()) {
+        if ($user->isAdmin() && !$user->hasVerifiedEmail()) {
             return redirect()->route('admin.dashboard');
         }
 
-        if ($user->isManager()) {
+        if ($user->isManager()&& !$user->hasVerifiedEmail()) {
             return redirect()->route('manager.dashboard');
+        }
+        if (!$user->hasVerifiedEmail()) {
+            return redirect()->route('verification.notice');
         }
 
         return redirect()->route('client.dashboard');
