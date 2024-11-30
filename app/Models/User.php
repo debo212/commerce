@@ -56,9 +56,9 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->role === 'gestionnaire';
     }
 
-    /* public function isClient()
+    public function isClient():bool
     {
         return $this->role === 'client';
-    }*/
+    }
 
 }
