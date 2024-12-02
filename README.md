@@ -11,7 +11,7 @@
 - Middleware pour restreindre l'accès en fonction des rôles.
 
 ### Instructions pour tester
-1. Clonez le dépôt : `git clone <URL_DU_DEPOT>`.
+1. Clonez le dépôt : `git clone https://github.com/GoldenDev74/commerce.git`.
 2. Installez les dépendances : `composer install`. & `npm install`
 
 4. Configurez l'environnement : `.env`.
