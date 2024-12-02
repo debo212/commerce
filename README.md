@@ -35,7 +35,7 @@
 ## Appendix
 
 pour tester les mails on a utiliser mailtrap. Pour ce faire, ajouter un nouveau compte google à vos compte avec les identifiant suivantes:
- - email : redmoondevs@gmail.compte
+ - email : redmoondevs2024@gmail.com
  - mot de passe : redmoon102024
 arrivé sur mailtrap
 
