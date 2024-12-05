@@ -41,7 +41,7 @@ pour tester les mails on a utiliser mailtrap. Pour ce faire, ajouter un nouveau 
  - mot de passe : redmoon102024
 arrivé sur mailtrap
 
-![Capture d'écran 2024-12-01 224735](https://github.com/user-attachments/assets/888b8b36-8f70-4dc7-be78-129a66a40440)
+![image](https://github.com/user-attachments/assets/b5c875e2-01d9-4bd3-8c8b-c5191b0ede1e)
 ![Capture d’écran 2024-12-01 224909](https://github.com/user-attachments/assets/f386814e-b440-4205-a07b-d3d0c299706c)
 ![Capture d’écran 2024-12-01 225006](https://github.com/user-attachments/assets/44f85e5b-06ac-4135-be21-d998979b958b)
 ![Capture d’écran 2024-12-01 225049](https://github.com/user-attachments/assets/3410354f-e98d-4754-9bdc-6efff902267b)
@@ -66,7 +66,7 @@ Voici les collaborateurs intervenues !
 
 ![image](https://github.com/user-attachments/assets/82978f21-6be4-4d0a-a40d-0ac27cf33c28)
 
-![image](https://github.com/user-attachments/assets/516050f4-fdd5-40be-8519-5a2da2db5138)
+![image](https://github.com/user-attachments/assets/acc6a562-d0c8-445b-8e62-9f908508a011)
 
 ![image](https://github.com/user-attachments/assets/c6e8ae3e-7f79-4e21-a1f0-32d34c9d97b5)
 
