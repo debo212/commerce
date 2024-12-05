@@ -21,7 +21,7 @@
     <body class="font-sans text-gray-900 antialiased">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-1 sm:pt-0 bg-gray-100">
 
-            <div class=" w-4/5 sm:max-w-md px-6 py-0 bg-white shadow-md overflow-hidden sm:rounded-lg top-0">
+            <div class=" w-[800px] sm:max-w-md px-6 py-0 bg-white shadow-md overflow-hidden sm:rounded-lg top-0 h-64">
                 {{ $slot }}
             </div>
         </div>
