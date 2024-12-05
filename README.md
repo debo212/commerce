@@ -1,66 +1,88 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### Module d'authentification
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Fonctionnalités principales
+- Gestion des rôles (admin, gestionnaire, client).
+- Redirection basée sur les rôles.
+- Vérification des emails pour les nouveaux utilisateurs.
+- Gestion de la récupération de mot de passe.
+- Middleware pour restreindre l'accès en fonction des rôles.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Instructions pour tester
+1. Clonez le dépôt : `git clone https://github.com/GoldenDev74/commerce.git`.
+2. Installez les dépendances : `composer install`. & `npm install`
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+4. Configurez l'environnement : `.env`.
+5. Ajoute la méthode suivante dans le fichier AppServiceProvider.php dans le répertoire app/Providers :
+```
+ public function boot()
+    {
+        // Définit la taille par défaut des colonnes string
+        Schema::defaultStringLength(191);
+    }
+```
+4. Exécutez les migrations : `php artisan migrate`.
+5. Seed la base de données : `php artisan db:seed --class=UserSeeder`. pour créer l'admin et le gestionnaire
+    * Admin :
+         . email: admin@gmail.com
+         . mot de passe: admin2024
+    * Gestionnaire :
+        . email: gestionnaire@gmail.com
+        . mot de passe : gestion2024
+  
+7. Lancez le serveur : `php artisan serve`.
 
-## Learning Laravel
+## Appendix
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+pour tester les mails on a utiliser mailtrap. Pour ce faire, ajouter un nouveau compte google à vos compte avec les identifiant suivantes:
+ - email : redmoondevs2024@gmail.com
+ - mot de passe : redmoon102024
+arrivé sur mailtrap
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+![Capture d'écran 2024-12-01 224735](https://github.com/user-attachments/assets/70e2183e-ee7d-4990-b14e-3f44a29ca195)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![Capture d’écran 2024-12-01 224909](https://github.com/user-attachments/assets/f386814e-b440-4205-a07b-d3d0c299706c)
 
-## Laravel Sponsors
+![Capture d’écran 2024-12-01 225006](https://github.com/user-attachments/assets/44f85e5b-06ac-4135-be21-d998979b958b)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+![Capture d’écran 2024-12-01 225049](https://github.com/user-attachments/assets/3410354f-e98d-4754-9bdc-6efff902267b)
 
-### Premium Partners
+assurer de copier ses configuration suivantes :
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+![Capture d’écran 2024-12-01 225316](https://github.com/user-attachments/assets/9a7b20af-6930-48bd-8b61-7b9739743a81)
+
+dans vôtres fichier .env comme suit : 
+
+![Capture d’écran 2024-12-01 225339](https://github.com/user-attachments/assets/91d90333-d266-4c27-aea1-5995861fbaf3)
+
+si tout est bien configurer vous deviez reçevoir les mails de vérification pour l'inscription, les mots de passes oublier.
 
 ## Contributing
+Voici les collaborateurs intervenues !
+- GoldenDev74
+- Mabel4008
+- Steventog
+- Antoine 253
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+## ScreenShoot
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![image](https://github.com/user-attachments/assets/1e52abf4-af54-4759-a731-de12a550c3da)
 
-## Security Vulnerabilities
+![image](https://github.com/user-attachments/assets/6dfe56e0-ecc9-45e4-8de3-c3e59acb5b25)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![image](https://github.com/user-attachments/assets/acc6a562-d0c8-445b-8e62-9f908508a011)
 
-## License
+![image](https://github.com/user-attachments/assets/c6e8ae3e-7f79-4e21-a1f0-32d34c9d97b5)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![image](https://github.com/user-attachments/assets/68d2fba6-618b-4d25-bf59-4f5e262d5e1e)
+
+![image](https://github.com/user-attachments/assets/0e3ada22-66cb-46f5-ac81-a8fc6693e9c3)
+
+![image](https://github.com/user-attachments/assets/a1702d40-f7b6-43ef-9713-5d7ee676637d)
+
+![image](https://github.com/user-attachments/assets/49501512-a7f6-4d96-8dfb-61fdf325228a)
+
+
