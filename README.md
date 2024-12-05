@@ -41,13 +41,20 @@ pour tester les mails on a utiliser mailtrap. Pour ce faire, ajouter un nouveau 
  - mot de passe : redmoon102024
 arrivé sur mailtrap
 
-![image](https://github.com/user-attachments/assets/b5c875e2-01d9-4bd3-8c8b-c5191b0ede1e)
+![Capture d'écran 2024-12-01 224735](https://github.com/user-attachments/assets/70e2183e-ee7d-4990-b14e-3f44a29ca195)
+
 ![Capture d’écran 2024-12-01 224909](https://github.com/user-attachments/assets/f386814e-b440-4205-a07b-d3d0c299706c)
+
 ![Capture d’écran 2024-12-01 225006](https://github.com/user-attachments/assets/44f85e5b-06ac-4135-be21-d998979b958b)
+
 ![Capture d’écran 2024-12-01 225049](https://github.com/user-attachments/assets/3410354f-e98d-4754-9bdc-6efff902267b)
+
 assurer de copier ses configuration suivantes :
+
 ![Capture d’écran 2024-12-01 225316](https://github.com/user-attachments/assets/9a7b20af-6930-48bd-8b61-7b9739743a81)
+
 dans vôtres fichier .env comme suit : 
+
 ![Capture d’écran 2024-12-01 225339](https://github.com/user-attachments/assets/91d90333-d266-4c27-aea1-5995861fbaf3)
 
 si tout est bien configurer vous deviez reçevoir les mails de vérification pour l'inscription, les mots de passes oublier.
@@ -62,7 +69,7 @@ Voici les collaborateurs intervenues !
 
 ## ScreenShoot
 
-![image](https://github.com/user-attachments/assets/3566f5ba-0583-4796-b1ca-768753091640)
+![image](https://github.com/user-attachments/assets/1e52abf4-af54-4759-a731-de12a550c3da)
 
 ![image](https://github.com/user-attachments/assets/82978f21-6be4-4d0a-a40d-0ac27cf33c28)
 
