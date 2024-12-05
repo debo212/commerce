@@ -71,7 +71,7 @@ Voici les collaborateurs intervenues !
 
 ![image](https://github.com/user-attachments/assets/1e52abf4-af54-4759-a731-de12a550c3da)
 
-![image](https://github.com/user-attachments/assets/82978f21-6be4-4d0a-a40d-0ac27cf33c28)
+![image](https://github.com/user-attachments/assets/6dfe56e0-ecc9-45e4-8de3-c3e59acb5b25)
 
 ![image](https://github.com/user-attachments/assets/acc6a562-d0c8-445b-8e62-9f908508a011)
 
