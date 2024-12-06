@@ -22,4 +22,5 @@ class AppServiceProvider extends ServiceProvider
         // Définit la taille par défaut des colonnes string
         Schema::defaultStringLength(191);
     }
+    
 }
